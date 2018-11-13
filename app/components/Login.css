@@ -1,0 +1,14 @@
+.Login {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  min-height: 100px;
+}
+
+input {
+  margin-bottom: 8px;
+}
+
+.Login_success {
+  margin: 7px;
+}
