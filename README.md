@@ -2,7 +2,7 @@
 
 ```bash
 # clone it
-$ git clone https://github.com/jhen0409/react-chrome-extension-boilerplate.git
+$ git clone https://github.com/OpenSocialCSN/chrome-extension.git
 
 # Install dependencies
 $ npm install
