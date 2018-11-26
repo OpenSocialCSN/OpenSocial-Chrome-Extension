@@ -12,7 +12,7 @@ export default class Root extends Component {
   componentDidMount() {
     const { store } = this.props;
     const { user, subscriptions } = store.getState();
-    console.log("app mounted. state:", store.getState());
+    // console.log("app mounted. state:", store.getState());
 
     if (user && user.authToken && user.userId) {
       let channelWithUnread = subscriptions.find(channel => channel.unread > 0);

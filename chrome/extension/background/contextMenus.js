@@ -27,14 +27,14 @@ function popWindow(type) {
 
 chrome.contextMenus.create({
   id: CONTEXT_MENU_ID,
-  title: "React Chrome Extension Example",
+  title: "Go to OpenSocial Chat",
   contexts: ["all"],
   documentUrlPatterns: ["https://github.com/*"]
 });
 
 chrome.contextMenus.onClicked.addListener(event => {
   if (event.menuItemId === CONTEXT_MENU_ID) {
-    popWindow("open");
+    // popWindow("open"); // could be useful later, creates modal html window
     window.open("https://chat.opensocial.me/", "_blank");
   }
 });
