@@ -1,10 +1,10 @@
 {
   "version": "0.0.0",
-  "name": "react-chrome-extension-example",
+  "name": "open-social-extension",
   "manifest_version": 2,
-  "description": "Example for react-chrome-extension-boilerplate",
+  "description": "Watch your notifications on OpenSocial!",
   "browser_action": {
-    "default_title": "React Chrome Extension Example",
+    "default_title": "OpenSocial Chrome Extension",
     "default_popup": "popup.html"
   },
   "icons": {
