@@ -30,8 +30,6 @@ export default class Login extends Component {
   render() {
     const { user } = this.props;
 
-    // return <UserAdded user={{ username: "joe.roddy" }} />;
-
     return user.authToken ? (
       <UserAdded user={user} />
     ) : (

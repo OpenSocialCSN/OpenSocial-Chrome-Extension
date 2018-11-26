@@ -11,11 +11,16 @@ export default class Root extends Component {
 
   componentDidMount() {
     const { store } = this.props;
-    const user = store.getState().user;
+    const { user, subscriptions } = store.getState();
     console.log("app mounted. state:", store.getState());
 
     if (user && user.authToken && user.userId) {
-      window.open("https://chat.opensocial.me/", "_blank");
+      let channelWithUnread = subscriptions.find(channel => channel.unread > 0);
+      const uri = `https://chat.opensocial.me/channel/${
+        channelWithUnread ? channelWithUnread.name : "general"
+      }`;
+
+      window.open(uri, "_blank");
       store.dispatch(CLEAR_SUBSCRIPTIONS); //remove badge count
     }
   }
