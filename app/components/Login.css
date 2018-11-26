@@ -1,14 +1,59 @@
 .Login {
   display: flex;
+  flex-direction: column;
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-bottom: 10px;
+  justify-content: space-between;
+}
+
+.logoContainer {
+  margin-bottom: 9px;
+  display: flex;
   justify-content: center;
-  margin-bottom: 10px;
-  min-height: 100px;
 }
 
 input {
-  margin-bottom: 8px;
+  /* height: 30px;
+  font-size: 18px; */
+  margin-top: 8px;
+  /* new */
+  color: rgb(65, 72, 82);
+  border-radius: 2px;
+  padding: 0.75rem 1rem;
+  border-color: rgb(225, 229, 232);
+  border-width: 1.99653px;
+  border-style: solid;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  font-size: 14px;
+  background-color: transparent;
+}
+
+button {
+  background-color: #1d74f5;
+  color: white;
+  border: 0;
+  height: 40px;
+  font-size: 14px;
+  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s;
+  opacity: 1;
+  cursor: pointer;
+  margin-top: 14px;
+}
+button:hover {
+  opacity: 0.4;
 }
 
 .Login_success {
   margin: 7px;
+}
+
+.detailText {
+  margin-top: 15px;
+  font-size: 18px;
 }

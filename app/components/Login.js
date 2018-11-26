@@ -30,39 +30,34 @@ export default class Login extends Component {
   render() {
     const { user } = this.props;
 
-    return (
+    // return <UserAdded user={{ username: "joe.roddy" }} />;
+
+    return user.authToken ? (
+      <UserAdded user={user} />
+    ) : (
       <div className={style.Login}>
-        {user.authToken ? (
-          <UserAdded user={user} />
-        ) : (
-          <div>
-            <h1>
-              Login to <br />
-              rocket.chat
-            </h1>
-            <input
-              type="text"
-              placeholder="username"
-              onChange={e => this.setState({ username: e.target.value })}
-            />
-            <br />
-            <input
-              type="password"
-              placeholder="Password"
-              onChange={e => this.setState({ password: e.target.value })}
-            />
-            <br />
-            <button onClick={this.login}>Login</button>
-          </div>
-        )}
+        <span className={style.logoContainer}>
+          <img src="https://chat.opensocial.me/assets/logo.png" height={50} />
+        </span>
+        <input
+          type="text"
+          placeholder="Username"
+          onChange={e => this.setState({ username: e.target.value })}
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          onChange={e => this.setState({ password: e.target.value })}
+        />
+        <button onClick={this.login}>Login</button>
       </div>
     );
   }
 }
 
 const UserAdded = ({ user }) => (
-  <div>
-    <span>
+  <div className={style.Login}>
+    <span className={style.detailText}>
       Now tracking messages for <b>{user.username}</b>!<br />
     </span>{" "}
     <button style={{ marginTop: 20 }} onClick={window.close}>
