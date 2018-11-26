@@ -36,5 +36,5 @@ const checkForUser = async () => {
   });
 };
 
-//update rocket chat messages every 10 secs
-pollResource(updateRocketChatBadge, 10000);
+//update rocket chat messages every 5 secs
+pollResource(updateRocketChatBadge, 5000);
