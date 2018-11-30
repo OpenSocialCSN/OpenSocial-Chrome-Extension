@@ -10,7 +10,6 @@ export default async reduxStore => {
     const uri = `https://chat.opensocial.me/channel/${
       channelWithUnread ? channelWithUnread.name : "general"
     }`;
-    const uri = LOGIN_URI;
     reduxStore.dispatch({ type: CLEAR_SUBSCRIPTIONS }); //remove badge count
     window.open(uri, "_blank");
   } else {
