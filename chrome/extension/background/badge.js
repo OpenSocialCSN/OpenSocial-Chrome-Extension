@@ -1,7 +1,7 @@
 // sets initial badge on startup
 
 chrome.storage.local.get("state", state => {
-  if (state) {
+  if (state && state.state) {
     //weird chrome storage thing, data is stored like data.data: {}
     state = JSON.parse(state.state);
     let subscriptions = state.subscriptions || [];

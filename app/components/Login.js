@@ -35,7 +35,10 @@ export default class Login extends Component {
     ) : (
       <div className={style.Login}>
         <span className={style.logoContainer}>
-          <img src="https://chat.opensocial.me/assets/logo.png" height={50} />
+          <img
+            src="https://www.opensocial.me/wp-content/uploads/2018/10/OpenSocial-logo250.png"
+            height={50}
+          />
         </span>
         <input
           type="text"

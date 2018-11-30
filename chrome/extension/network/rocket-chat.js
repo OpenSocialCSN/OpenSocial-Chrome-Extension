@@ -29,3 +29,22 @@ export const getSubscriptions = (userId, authToken) => {
 
 // TODO: build system for managing multiple rocket-chat servers
 const API_URL = "https://chat.opensocial.me/api/v1";
+
+export const getUserCredentials = async () => {
+  try {
+    const userId = await getCookieValue("rc_uid", "chat.opensocial.me");
+    const authToken = await getCookieValue("rc_token", "chat.opensocial.me");
+    return { userId, authToken };
+  } catch (e) {
+    return null;
+  }
+};
+
+const getCookieValue = (cookieName, domain) => {
+  return new Promise((resolve, reject) => {
+    chrome.cookies.getAll({ name: cookieName }, cookies => {
+      let c = cookies && cookies.find(c => c.domain === domain);
+      c && c.value ? resolve(c.value) : reject("cookie not found");
+    });
+  });
+};

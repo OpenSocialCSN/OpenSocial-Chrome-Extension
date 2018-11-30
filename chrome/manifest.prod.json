@@ -4,7 +4,7 @@
   "manifest_version": 2,
   "description": "Watch your notifications on OpenSocial!",
   "browser_action": {
-    "default_title": "OpenSocial Chrome Extension",
+    "default_title": "OpenSocial",
     "default_popup": "popup.html"
   },
   "icons": {
@@ -17,11 +17,12 @@
     "page": "background.html"
   },
   "permissions": [
+    "cookies",
     "contextMenus",
     "tabs",
     "storage",
     "http://*/*",
     "https://*/*"
   ],
-  "content_security_policy": "default-src 'self'; connect-src *; script-src 'self'; style-src * 'unsafe-inline'; img-src 'self' data:;"
+  "content_security_policy": "default-src 'self'; connect-src *; script-src 'self'; style-src * 'unsafe-inline'; img-src https://www.opensocial.me/;"
 }
